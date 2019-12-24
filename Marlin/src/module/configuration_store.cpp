@@ -783,6 +783,7 @@ void MarlinSettings::postprocess() {
     // PIDTEMP
     //
     {
+      /*
       _FIELD_TEST(hotendPID);
       HOTEND_LOOP() {
         PIDCF_t pidcf = {
@@ -794,6 +795,7 @@ void MarlinSettings::postprocess() {
         };
         EEPROM_WRITE(pidcf);
       }
+      */
 
       _FIELD_TEST(lpq_len);
       #if ENABLED(PID_EXTRUSION_SCALING)

@@ -353,12 +353,12 @@
 #endif
 
 // Aliases for LCD features
-#define HAS_SPI_LCD          ENABLED(ULTRA_LCD)
-#define HAS_DISPLAY         (HAS_SPI_LCD || ENABLED(EXTENSIBLE_UI))
-#define HAS_GRAPHICAL_LCD    ENABLED(DOGLCD)
-#define HAS_CHARACTER_LCD   (HAS_SPI_LCD && !HAS_GRAPHICAL_LCD)
-#define HAS_LCD_MENU        (ENABLED(ULTIPANEL) && DISABLED(NO_LCD_MENUS))
-#define HAS_ADC_BUTTONS      ENABLED(ADC_KEYPAD)
+//#define HAS_SPI_LCD          ENABLED(ULTRA_LCD)
+//#define HAS_DISPLAY         (HAS_SPI_LCD || ENABLED(EXTENSIBLE_UI))
+//#define HAS_GRAPHICAL_LCD    ENABLED(DOGLCD)
+//#define HAS_CHARACTER_LCD   (HAS_SPI_LCD && !HAS_GRAPHICAL_LCD)
+//#define HAS_LCD_MENU        (ENABLED(ULTIPANEL) && DISABLED(NO_LCD_MENUS))
+//#define HAS_ADC_BUTTONS      ENABLED(ADC_KEYPAD)
 
 /**
  * Extruders have some combination of stepper motors and hotends

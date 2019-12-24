@@ -1485,11 +1485,11 @@ static_assert(Y_MAX_LENGTH >= Y_BED_SIZE, "Movement bounds (Y_MIN_POS, Y_MAX_POS
 /**
  * Test Heater, Temp Sensor, and Extruder Pins; Sensor Type must also be set.
  */
-#if !HAS_HEATER_0
-  #error "HEATER_0_PIN not defined for this board."
-#elif !ANY_PIN(TEMP_0, MAX6675_SS)
-  #error "TEMP_0_PIN not defined for this board."
-#elif ((defined(__AVR_ATmega644P__) || defined(__AVR_ATmega1284P__)) && !PIN_EXISTS(E0_STEP, E0_DIR))
+//#if !HAS_HEATER_0
+  //#error "HEATER_0_PIN not defined for this board."
+//#if !ANY_PIN(TEMP_0, MAX6675_SS)
+  //#error "TEMP_0_PIN not defined for this board."
+#if ((defined(__AVR_ATmega644P__) || defined(__AVR_ATmega1284P__)) && !PIN_EXISTS(E0_STEP, E0_DIR))
   #error "E0_STEP_PIN or E0_DIR_PIN not defined for this board."
 #elif ( !(defined(__AVR_ATmega644P__) || defined(__AVR_ATmega1284P__)) && (!PIN_EXISTS(E0_STEP, E0_DIR) || !HAS_E0_ENABLE))
   #error "E0_STEP_PIN, E0_DIR_PIN, or E0_ENABLE_PIN not defined for this board."

@@ -41,16 +41,17 @@
 //  3.3V max when defined as an analog input
 //
 #define TEMP_BED_PIN       P0_23_A0   // A0 (T0) - (67) - TEMP_BED_PIN
-#define TEMP_0_PIN         P0_24_A1   // A1 (T1) - (68) - TEMP_0_PIN
+#define TEMP_CHAMBER_PIN         P0_24_A1   // A1 (T1) - (68) - TEMP_0_PIN
 #define TEMP_1_PIN         P0_25_A2   // A2 (T2) - (69) - TEMP_1_PIN
 
 //
 // Heaters / Fans
-//
-#ifndef HEATER_0_PIN
+//HEATER_0_PIN
+
+#ifndef HEATER_CHAMBER_PIN
   #define HEATER_0_PIN     P2_07
 #endif
-#if HOTENDS == 1
+#if HOTENDS <= 1
   #ifndef FAN1_PIN
     #define FAN1_PIN       P2_04
   #endif
@@ -62,8 +63,8 @@
 #ifndef FAN_PIN
   #define FAN_PIN          P2_03
 #endif
-#ifndef HEATER_BED_PIN
-  #define HEATER_BED_PIN   P2_05
+#ifndef SPINDLE_LASER_ENA_PIN
+  #define SPINDLE_LASER_ENA_PIN   P2_05
 #endif
 
 //
